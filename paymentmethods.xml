@@ -1,0 +1,333 @@
+<paymentmethods>
+	<paymentlib_transcentral_cc_visa type="array">
+		<label>VISA</label>
+		<type>creditcard</type>
+		<iconpath>EXT:paymentlib_transcentral/res/paymentmethod_visa.gif</iconpath>
+		<fields type="array">
+			<cc_number type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_creditcardnumber</label>
+				<config type="array">
+					<type>input</type>
+					<size type="integer">18</size>
+					<max type="integer">40</max>
+					<eval>required,ccnumber</eval>
+				</config>
+			</cc_number>
+			<cc_expdate_month type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_expirydatemonth</label>
+				<config type="array">
+					<type>select</type>
+					<items type="array">
+						<numIndex index="0">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_january</numIndex>
+							<numIndex index="1">1</numIndex>
+						</numIndex>
+						<numIndex index="1">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_february</numIndex>
+							<numIndex index="1">2</numIndex>
+						</numIndex>
+						<numIndex index="2">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_march</numIndex>
+							<numIndex index="1">3</numIndex>
+						</numIndex>
+						<numIndex index="3">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_april</numIndex>
+							<numIndex index="1">4</numIndex>
+						</numIndex>
+						<numIndex index="4">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_may</numIndex>
+							<numIndex index="1">5</numIndex>
+						</numIndex>
+						<numIndex index="5">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_june</numIndex>
+							<numIndex index="1">6</numIndex>
+						</numIndex>
+						<numIndex index="6">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_july</numIndex>
+							<numIndex index="1">7</numIndex>
+						</numIndex>
+						<numIndex index="7">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_august</numIndex>
+							<numIndex index="1">8</numIndex>
+						</numIndex>
+						<numIndex index="8">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_september</numIndex>
+							<numIndex index="1">9</numIndex>
+						</numIndex>
+						<numIndex index="9">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_october</numIndex>
+							<numIndex index="1">10</numIndex>
+						</numIndex>
+						<numIndex index="10">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_november</numIndex>
+							<numIndex index="1">11</numIndex>
+						</numIndex>
+						<numIndex index="11">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_december</numIndex>
+							<numIndex index="1">12</numIndex>
+						</numIndex>
+					</items>
+					<eval>required,ccexpdatemonth</eval>
+				</config>
+			</cc_expdate_month>
+			<cc_expdate_year type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_expirydateyear</label>
+				<config type="array">
+					<type>select</type>
+					<items>
+						<numIndex index="0">
+							<numIndex index="0"></numIndex>
+							<numIndex index="1">1</numIndex>
+						</numIndex>
+					</items>
+					<itemsProcFunc>tx_paymentlibtranscentral_provider->itemProcFunc_ccexpdateyear_items</itemsProcFunc>
+					<eval>required,ccexpdateyear</eval>
+				</config>
+			</cc_expdate_year>
+			<addr_name type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_creditcardowner</label>
+				<config type="array">
+					<type>input</type>
+					<size type="integer">30</size>
+					<max type="integer">100</max>
+					<eval>required</eval>
+				</config>
+			</addr_name>
+		</fields>
+	</paymentlib_transcentral_cc_visa>
+	<paymentlib_transcentral_cc_mastercard type="array">
+		<label>Mastercard</label>
+		<type>creditcard</type>
+		<iconpath>EXT:paymentlib_transcentral/res/paymentmethod_mastercard.gif</iconpath>
+		<fields type="array">
+			<cc_number type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_creditcardnumber</label>
+				<config type="array">
+					<type>input</type>
+					<size type="integer">18</size>
+					<max type="integer">40</max>
+					<eval>required,ccnumber</eval>
+				</config>
+			</cc_number>
+			<cc_expdate_month type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_expirydatemonth</label>
+				<config type="array">
+					<type>select</type>
+					<items type="array">
+						<numIndex index="0">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_january</numIndex>
+							<numIndex index="1">1</numIndex>
+						</numIndex>
+						<numIndex index="1">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_february</numIndex>
+							<numIndex index="1">2</numIndex>
+						</numIndex>
+						<numIndex index="2">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_march</numIndex>
+							<numIndex index="1">3</numIndex>
+						</numIndex>
+						<numIndex index="3">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_april</numIndex>
+							<numIndex index="1">4</numIndex>
+						</numIndex>
+						<numIndex index="4">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_may</numIndex>
+							<numIndex index="1">5</numIndex>
+						</numIndex>
+						<numIndex index="5">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_june</numIndex>
+							<numIndex index="1">6</numIndex>
+						</numIndex>
+						<numIndex index="6">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_july</numIndex>
+							<numIndex index="1">7</numIndex>
+						</numIndex>
+						<numIndex index="7">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_august</numIndex>
+							<numIndex index="1">8</numIndex>
+						</numIndex>
+						<numIndex index="8">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_september</numIndex>
+							<numIndex index="1">9</numIndex>
+						</numIndex>
+						<numIndex index="9">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_october</numIndex>
+							<numIndex index="1">10</numIndex>
+						</numIndex>
+						<numIndex index="10">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_november</numIndex>
+							<numIndex index="1">11</numIndex>
+						</numIndex>
+						<numIndex index="11">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_december</numIndex>
+							<numIndex index="1">12</numIndex>
+						</numIndex>
+					</items>
+					<eval>required,ccexpdatemonth</eval>
+				</config>
+			</cc_expdate_month>
+			<cc_expdate_year type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_expirydateyear</label>
+				<config type="array">
+					<type>select</type>
+					<items>
+						<numIndex index="0">
+							<numIndex index="0"></numIndex>
+							<numIndex index="1">1</numIndex>
+						</numIndex>
+					</items>
+					<itemsProcFunc>tx_paymentlibtranscentral_provider->itemProcFunc_ccexpdateyear_items</itemsProcFunc>
+					<eval>required,ccexpdateyear</eval>
+				</config>
+			</cc_expdate_year>
+			<addr_name type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_creditcardowner</label>
+				<config type="array">
+					<type>input</type>
+					<size type="integer">30</size>
+					<max type="integer">100</max>
+					<eval>required</eval>
+				</config>
+			</addr_name>
+		</fields>
+	</paymentlib_transcentral_cc_mastercard>
+	<paymentlib_transcentral_cc_americanexpress type="array">
+		<label>American Express</label>
+		<type>creditcard</type>
+		<iconpath>EXT:paymentlib_transcentral/res/paymentmethod_amex.gif</iconpath>
+		<fields type="array">
+			<cc_number type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_creditcardnumber</label>
+				<config type="array">
+					<type>input</type>
+					<size type="integer">18</size>
+					<max type="integer">40</max>
+					<eval>required,ccnumber</eval>
+				</config>
+			</cc_number>
+			<cc_expdate_month type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_expirydatemonth</label>
+				<config type="array">
+					<type>select</type>
+					<items type="array">
+						<numIndex index="0">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_january</numIndex>
+							<numIndex index="1">1</numIndex>
+						</numIndex>
+						<numIndex index="1">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_february</numIndex>
+							<numIndex index="1">2</numIndex>
+						</numIndex>
+						<numIndex index="2">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_march</numIndex>
+							<numIndex index="1">3</numIndex>
+						</numIndex>
+						<numIndex index="3">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_april</numIndex>
+							<numIndex index="1">4</numIndex>
+						</numIndex>
+						<numIndex index="4">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_may</numIndex>
+							<numIndex index="1">5</numIndex>
+						</numIndex>
+						<numIndex index="5">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_june</numIndex>
+							<numIndex index="1">6</numIndex>
+						</numIndex>
+						<numIndex index="6">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_july</numIndex>
+							<numIndex index="1">7</numIndex>
+						</numIndex>
+						<numIndex index="7">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_august</numIndex>
+							<numIndex index="1">8</numIndex>
+						</numIndex>
+						<numIndex index="8">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_september</numIndex>
+							<numIndex index="1">9</numIndex>
+						</numIndex>
+						<numIndex index="9">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_october</numIndex>
+							<numIndex index="1">10</numIndex>
+						</numIndex>
+						<numIndex index="10">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_november</numIndex>
+							<numIndex index="1">11</numIndex>
+						</numIndex>
+						<numIndex index="11">
+							<numIndex index="0">LLL:EXT:paymentlib/locallang.php:months_december</numIndex>
+							<numIndex index="1">12</numIndex>
+						</numIndex>
+					</items>
+					<eval>required,ccexpdatemonth</eval>
+				</config>
+			</cc_expdate_month>
+			<cc_expdate_year type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_expirydateyear</label>
+				<config type="array">
+					<type>select</type>
+					<items>
+						<numIndex index="0">
+							<numIndex index="0"></numIndex>
+							<numIndex index="1">1</numIndex>
+						</numIndex>
+					</items>
+					<itemsProcFunc>tx_paymentlibtranscentral_provider->itemProcFunc_ccexpdateyear_items</itemsProcFunc>
+					<eval>required,ccexpdateyear</eval>
+				</config>
+			</cc_expdate_year>
+			<addr_name type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_creditcardowner</label>
+				<config type="array">
+					<type>input</type>
+					<size type="integer">30</size>
+					<max type="integer">100</max>
+					<eval>required</eval>
+				</config>
+			</addr_name>
+		</fields>
+	</paymentlib_transcentral_cc_americanexpress>
+	<paymentlib_transcentral_elv type="array">
+		<label>LLL:EXT:paymentlib_transcentral/locallang.php:directdebit</label>
+		<type>directdebit</type>
+		<iconpath>EXT:paymentlib_transcentral/res/paymentmethod_elv.gif</iconpath>
+		<fields type="array">
+			<bank_name type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_bankname</label>
+				<config type="array">
+					<type>input</type>
+					<size type="integer">30</size>
+					<max type="integer">255</max>
+					<eval>required</eval>
+				</config>
+			</bank_name>
+			<bank_code type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_bankcode</label>
+				<config type="array">
+					<type>input</type>
+					<size type="integer">8</size>
+					<max type="integer">30</max>
+					<eval>required</eval>
+				</config>
+			</bank_code>
+			<bank_accountnumber type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_bankaccountnumber</label>
+				<config type="array">
+					<type>input</type>
+					<size type="integer">12</size>
+					<max type="integer">30</max>
+					<eval>required</eval>
+				</config>
+			</bank_accountnumber>
+			<addr_name type="array">
+				<label>LLL:EXT:paymentlib_transcentral/locallang.php:fields_bankaccountowner</label>
+				<config type="array">
+					<type>input</type>
+					<size type="integer">30</size>
+					<max type="integer">100</max>
+					<eval>required</eval>
+				</config>
+			</addr_name>
+		</fields>
+	</paymentlib_transcentral_elv>
+</paymentmethods>

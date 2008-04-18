@@ -1,0 +1,18 @@
+  # cat=provider/general; type=boolean; label= Certified by VISA / Mastercard: Only if your application, this extension and your webserver is certified by VISA / Mastercard you may switch this on! Otherwise you must not use the SOAP functions because credit card data would be processed by your webserver. Be sure of what you are doing, it's all an your own risk!
+scriptiscertified = 0
+  # cat=provider/account; type=string; label=  Your Assigned Merchant Number by TransFirst
+merchantid = integration
+  # cat=provider/account; type=string; label=TransFirst Security Key
+regkey = 1234
+  # cat=provider/account; type=int; label= Transaction user:Id of the transaction user (not the admin user!)
+trxuserid = 10011
+  # cat=provider/account; type=string; label= Transaction Registration Key:Password of the transaction user (not the admin user!)
+trxpassword = KK48NPYEJHMAH6DK
+  # cat=provider/account; type=string; label= Shared secret [IMPORTANT!]: Value of the shared secret. Used for creating MD5 hashes to guarantee integrity of sent and received data. Make sure that this is always set to a long, secret value and that you enter the same secret key at the Transaction Central configuration site.
+sharedsecret = 12355544477203258
+  # cat=provider/form; type=string; label= Post Interface-TransFirst Hosted:Using the form method, post your TransFirst assigned Merchant ID and RegKey to the TransFirst secure web page and let TransFirst collect all the credit card information on the Transaction Central secure servers.
+formuri = https://webservices.primerchants.com/billing/TransactionCentral/EnterTransaction.asp
+  # cat=provider/wsdl; type=string; label= WSDL URI:URI of the WSDL definition for the Transaction Central gateway
+wsdluri = https://www.primerchants.com/it/PRIWSDL.xml
+  # cat=provider/wsdl; type=string; label= Hidden trigger remote IP: IP address of the Transaction Central server which initiates the callback. Usually you don't have to change this but if your succesful transactions are not registered anymore, ask the Transaction Central support for the current IP address.
+hiddentriggerremoteip = 69.25.142.10
